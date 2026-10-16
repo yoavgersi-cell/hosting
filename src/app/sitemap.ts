@@ -1,0 +1,82 @@
+import type { MetadataRoute } from "next";
+import { getConfig } from "@/lib/config-store";
+import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
+import { REVIEWERS } from "@/data/reviewers";
+
+const SITE_URL = "https://www.thetopwebhosting.com";
+const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
+const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(updatedAt));
+
+// Single-vertical web hosting sitemap. All content comes from the config (code seed).
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const cfg = await getConfig();
+
+  const staticPaths: { path: string; priority: number; changeFrequency: "weekly" | "monthly" }[] = [
+    { path: "/", priority: 1, changeFrequency: "weekly" },
+    { path: "/reviews", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/articles", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/about", priority: 0.3, changeFrequency: "monthly" },
+    { path: "/contact", priority: 0.3, changeFrequency: "monthly" },
+    { path: "/disclaimer", priority: 0.2, changeFrequency: "monthly" },
+    { path: "/privacy", priority: 0.2, changeFrequency: "monthly" },
+    { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
+  ];
+
+  const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
+    url: `${SITE_URL}${p.path === "/" ? "" : p.path}`,
+    lastModified: FALLBACK_DATE,
+    changeFrequency: p.changeFrequency,
+    priority: p.priority,
+  }));
+
+  // Site-level trust pages: the editorial policy and reviewer profiles.
+  entries.push({
+    url: `${SITE_URL}/editorial-policy`,
+    lastModified: new Date("2026-10-04"),
+    changeFrequency: "monthly",
+    priority: 0.4,
+  });
+  for (const r of REVIEWERS) {
+    entries.push({
+      url: `${SITE_URL}/reviewers/${r.slug}`,
+      lastModified: new Date(`${r.since}-01`),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    });
+  }
+
+  // Provider reviews
+  for (const r of cfg.reviews ?? []) {
+    entries.push({
+      url: `${SITE_URL}/reviews/${r.slug}`,
+      lastModified: flooredLastModified(r.updatedAt),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+  }
+
+  // Head-to-head battle pages (served at the root)
+  for (const b of cfg.battles ?? []) {
+    entries.push({
+      url: `${SITE_URL}/${b.slug}`,
+      lastModified: flooredLastModified(b.updatedAt),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    });
+  }
+
+
+  // Articles / guides
+  for (const a of cfg.articles ?? []) {
+    if (NOINDEX_ARTICLE_SLUGS.includes(a.slug)) continue;
+    entries.push({
+      url: `${SITE_URL}/articles/${a.slug}`,
+      lastModified: flooredLastModified(a.updatedAt),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+  }
+
+  return entries;
+}
