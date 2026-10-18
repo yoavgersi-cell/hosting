@@ -15,19 +15,24 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="border-b-2 border-[#DDD2FB] bg-white">
+    <header className="border-b border-[#ECE7FA] bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-baseline gap-1.5" aria-label="The Top Web Hosting home">
-          <span className="text-[20px] font-extrabold tracking-tight text-[#6A45C9]">The Top Web Hosting</span>
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#6B6B6B]">
-            .com
+        <Link href="/" className="flex items-center gap-2" aria-label="The Top Web Hosting home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-mark.png" alt="" width={28} height={28} className="h-7 w-7" />
+          <span className="flex items-baseline gap-1">
+            <span className="text-[20px] font-extrabold tracking-tight">
+              <span className="text-[#191919]">The Top</span>{" "}
+              <span className="text-[#9B7FEE]">Web Hosting</span>
+            </span>
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A8A]">.com</span>
           </span>
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden sm:flex items-center gap-7 text-[14px] font-medium text-[#191919]">
           {NAV.map((item) => (
-            <Link key={item.label} href={item.href} className="hover:text-[#6A45C9] hover:underline transition-colors">
+            <Link key={item.label} href={item.href} className="hover:text-[#191919] hover:underline transition-colors">
               {item.label}
             </Link>
           ))}

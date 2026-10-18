@@ -52,7 +52,7 @@ export function RichComparisonCard({
     <article className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
       {/* Top ranked ribbon */}
       {product.badge && (
-        <div className="flex items-center gap-1.5 bg-[#8A63E8] px-5 py-1.5 text-[12px] font-bold uppercase tracking-wide text-white">
+        <div className="flex items-center gap-1.5 bg-[#CDBDFB] px-5 py-1.5 text-[12px] font-bold uppercase tracking-wide text-[#2A1660]">
           <BadgeCheck className="h-3.5 w-3.5" strokeWidth={2.5} />
           {product.badge}
         </div>
@@ -88,7 +88,7 @@ export function RichComparisonCard({
               </div>
               <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#6A45C9] sm:text-[11px]">{product.ratingLabel}</p>
             </div>
-            <div className="flex flex-col items-center justify-center rounded-lg bg-[#8A63E8] px-2.5 py-1 text-white sm:rounded-xl sm:px-3 sm:py-1.5">
+            <div className="flex flex-col items-center justify-center rounded-lg bg-[#CDBDFB] px-2.5 py-1 text-[#2A1660] sm:rounded-xl sm:px-3 sm:py-1.5">
               <span className="text-[20px] font-extrabold leading-none sm:text-[24px]">{product.rating.toFixed(1)}</span>
               <span className="mt-0.5 text-[8px] font-semibold uppercase tracking-wide text-white/70 sm:text-[9px]">out of 10</span>
             </div>
@@ -184,14 +184,14 @@ export function RichComparisonCard({
                 position={product.rank}
                 pageType="listing"
                 sourceFlow="main_comparison"
-                className="flex h-[48px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#8A63E8] text-[15px] font-bold text-white transition-colors hover:bg-[#7853DB] sm:h-[50px]"
+                className="flex h-[48px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#CDBDFB] text-[15px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8] sm:h-[50px]"
               >
                 Visit Site
                 <ArrowUpRight className="h-4 w-4" strokeWidth={2.5} />
               </ProviderCta>
               <Link
                 href={reviewHref}
-                className="text-center text-[12.5px] font-semibold text-[#6A45C9] hover:underline"
+                className="text-center text-[12.5px] font-semibold text-[#191919] hover:underline"
               >
                 Read full review
               </Link>

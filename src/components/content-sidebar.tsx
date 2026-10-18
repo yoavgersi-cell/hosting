@@ -53,7 +53,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                           position={pi + 1}
                           pageType={pageType}
                           sourceFlow={sourceFlow}
-                          className="shrink-0 rounded-lg bg-[#8A63E8] px-3 py-1.5 text-[12px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+                          className="shrink-0 rounded-lg bg-[#CDBDFB] px-3 py-1.5 text-[12px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
                         >
                           Visit
                         </ProviderCta>
@@ -75,7 +75,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                   </p>
                   <Link
                     href={config.quizCta.ctaUrl}
-                    className="mt-4 flex h-[40px] w-full items-center justify-center gap-1.5 rounded-lg bg-[#8A63E8] text-[13px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+                    className="mt-4 flex h-[40px] w-full items-center justify-center gap-1.5 rounded-lg bg-[#CDBDFB] text-[13px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
                   >
                     {config.quizCta.ctaText}
                     <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -131,7 +131,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                 </p>
                 <Link
                   href={config.quizCta.ctaUrl}
-                  className="mt-4 inline-flex h-[44px] items-center justify-center gap-1.5 rounded-lg bg-[#8A63E8] px-6 text-[14px] font-bold text-white"
+                  className="mt-4 inline-flex h-[44px] items-center justify-center gap-1.5 rounded-lg bg-[#CDBDFB] px-6 text-[14px] font-bold text-[#2A1660]"
                 >
                   {config.quizCta.ctaText}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -159,7 +159,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                         position={pi + 1}
                         pageType={pageType}
                         sourceFlow={sourceFlow}
-                        className="shrink-0 rounded-lg bg-[#8A63E8] px-3 py-1.5 text-[12px] font-bold text-white"
+                        className="shrink-0 rounded-lg bg-[#CDBDFB] px-3 py-1.5 text-[12px] font-bold text-[#2A1660]"
                       >
                         Visit
                       </ProviderCta>

@@ -135,7 +135,7 @@ export default async function HowWeRankPage() {
           <div className="space-y-4">
             {FACTORS.map(({ category, weight, desc }) => (
               <div key={category} className="flex gap-4 rounded-lg border border-gray-200 bg-white p-4">
-                <span className="shrink-0 rounded bg-[#8A63E8] px-2.5 py-1 text-[12px] font-bold text-white">{weight}</span>
+                <span className="shrink-0 rounded bg-[#CDBDFB] px-2.5 py-1 text-[12px] font-bold text-[#2A1660]">{weight}</span>
                 <div>
                   <p className="text-[14px] font-bold text-[#191919]">{category}</p>
                   <p className="mt-0.5 text-[13px] text-gray-500">{desc}</p>
@@ -358,7 +358,7 @@ export default async function HowWeRankPage() {
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/"
-              className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#8A63E8] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+              className="inline-flex h-[44px] items-center justify-center rounded-lg bg-[#CDBDFB] px-6 text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
             >
               Compare Providers
             </Link>

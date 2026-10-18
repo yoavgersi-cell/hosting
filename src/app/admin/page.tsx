@@ -221,7 +221,7 @@ export default function AdminPage() {
           />
           <button
             onClick={handleLogin}
-            className="w-full rounded-lg bg-[#8A63E8] py-2.5 text-sm font-bold text-white hover:bg-[#7853DB]"
+            className="w-full rounded-lg bg-[#CDBDFB] py-2.5 text-sm font-bold text-[#2A1660] hover:bg-[#BBA6F8]"
           >
             Login
           </button>
@@ -283,7 +283,7 @@ export default function AdminPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="rounded-lg bg-[#8A63E8] px-6 py-2 text-sm font-bold text-white hover:bg-[#7853DB] disabled:opacity-50"
+            className="rounded-lg bg-[#CDBDFB] px-6 py-2 text-sm font-bold text-[#2A1660] hover:bg-[#BBA6F8] disabled:opacity-50"
           >
             {saving ? "Saving..." : "Save Changes"}
           </button>

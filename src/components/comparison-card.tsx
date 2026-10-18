@@ -64,7 +64,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           <h3 className="text-[12px] font-semibold text-[#1A1A1A]">{product.name}</h3>
           <a
             href={`${linkPrefix}/reviews/${product.id}`}
-            className="text-[12px] font-semibold text-[#6A45C9] hover:underline"
+            className="text-[12px] font-semibold text-[#191919] underline-offset-2 hover:underline"
           >
             Read Review
           </a>
@@ -72,7 +72,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           <ul className="mt-1 space-y-0.5">
             {product.highlights.slice(0, 3).map((highlight) => (
               <li key={highlight} className="flex items-center gap-2 text-[12px] leading-[1.35] text-gray-800">
-                <Check className="h-3.5 w-3.5 shrink-0 text-[#6A45C9]" strokeWidth={2} />
+                <Check className="h-3.5 w-3.5 shrink-0 text-gray-500" strokeWidth={2} />
                 {highlight}
               </li>
             ))}
@@ -97,7 +97,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
               position={product.rank}
               pageType={pageType}
               sourceFlow={sourceFlow}
-              className="flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-[#8A63E8] text-[15px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+              className="flex h-[42px] w-full items-center justify-center gap-2 rounded-lg bg-[#CDBDFB] text-[15px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
             >
               Visit Site
               {arrowSvg}
@@ -133,7 +133,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
         <ul className="mt-1.5 space-y-1">
           {product.highlights.slice(0, 3).map((highlight) => (
             <li key={highlight} className="flex items-start gap-2 text-[14px] leading-[1.4] text-gray-800">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#6A45C9]" strokeWidth={2} />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-gray-500" strokeWidth={2} />
               {highlight}
             </li>
           ))}
@@ -157,7 +157,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           position={product.rank}
           pageType={pageType}
           sourceFlow={sourceFlow}
-          className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#8A63E8] text-[16px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+          className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#CDBDFB] text-[16px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
         >
           Visit Site
           {arrowSvg}

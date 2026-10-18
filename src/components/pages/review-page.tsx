@@ -439,7 +439,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               providerSlug={provider.id}
               pageType="review"
               sourceFlow="provider_review"
-              className="flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#8A63E8] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB] sm:shrink-0"
+              className="flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#CDBDFB] px-6 text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8] sm:shrink-0"
             >
               Visit {provider.name}
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
@@ -620,7 +620,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <ol className="space-y-4">
               {review.howItWorks.map((step, i) => (
                 <li key={i} className="flex gap-4">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#8A63E8] text-[13px] font-bold text-white">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#CDBDFB] text-[13px] font-bold text-[#2A1660]">
                     {i + 1}
                   </div>
                   <div>
@@ -692,7 +692,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             providerSlug={provider.id}
             pageType="review"
             sourceFlow="provider_review"
-            className="inline-flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#8A63E8] px-8 text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+            className="inline-flex h-[44px] items-center justify-center gap-2 rounded-lg bg-[#CDBDFB] px-8 text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
           >
             Visit {provider.name}
             <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
@@ -847,7 +847,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               providerSlug={provider.id}
               pageType="review"
               sourceFlow="provider_review"
-              className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#8A63E8] text-[15px] font-bold text-white transition-colors hover:bg-[#7853DB] sm:w-auto sm:px-8"
+              className="mt-5 flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#CDBDFB] text-[15px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8] sm:w-auto sm:px-8"
             >
               Visit {provider.name}
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

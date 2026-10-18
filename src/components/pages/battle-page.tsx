@@ -688,7 +688,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   providerSlug={provider.id}
                   pageType="battle"
                   sourceFlow="battle_page"
-                  className="mt-auto flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#8A63E8] text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+                  className="mt-auto flex h-[44px] w-full items-center justify-center gap-1.5 rounded-xl bg-[#CDBDFB] text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
                 >
                   Visit {provider.name}
                   <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -761,7 +761,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                           providerSlug={provider.id}
                           pageType="battle"
                           sourceFlow="battle_page"
-                          className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-xl bg-[#8A63E8] px-5 text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+                          className="inline-flex h-[42px] items-center justify-center gap-1.5 rounded-xl bg-[#CDBDFB] px-5 text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
                         >
                           Visit {provider.name}
                           <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
@@ -939,7 +939,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         providerSlug={provider.id}
                         pageType="battle"
                         sourceFlow="battle_page"
-                        className="flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#8A63E8] text-[15px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+                        className="flex h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-[#CDBDFB] text-[15px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
                       >
                         Get started with {provider.name}
                         <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
