@@ -89,7 +89,7 @@ export function BattleStickyCta({
                     className={
                       isOther
                         ? "flex h-[48px] items-center justify-center gap-1.5 rounded-xl border-2 border-[#8A63E8] bg-white px-2 text-[14px] font-bold text-[#6A45C9] transition-transform active:scale-[0.98]"
-                        : "flex h-[48px] items-center justify-center gap-1.5 rounded-xl bg-gradient-to-b from-[#8A63E8] to-[#7853DB] px-2 text-[14px] font-bold text-white shadow-sm transition-transform active:scale-[0.98]"
+                        : "flex h-[48px] items-center justify-center gap-1.5 rounded-xl bg-[#CDBDFB] px-2 text-[14px] font-bold text-[#2A1660] shadow-sm transition-transform active:scale-[0.98]"
                     }
                   >
                     <span className="truncate">Visit {p.name}</span>

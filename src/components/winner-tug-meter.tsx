@@ -113,7 +113,7 @@ export function WinnerTugMeter({
               providerSlug={winnerSlug}
               pageType="battle"
               sourceFlow="battle_page"
-              className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl bg-[#8A63E8] px-6 text-[14px] font-bold text-white transition-colors hover:bg-[#7853DB]"
+              className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl bg-[#CDBDFB] px-6 text-[14px] font-bold text-[#2A1660] transition-colors hover:bg-[#BBA6F8]"
             >
               Visit {winnerName}
               <ArrowRight className="h-4 w-4" strokeWidth={2.5} />

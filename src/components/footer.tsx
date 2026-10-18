@@ -71,7 +71,7 @@ export async function Footer() {
           {/* Brand blurb */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <p className="text-[13px] leading-relaxed text-gray-500">
-              <span className="font-bold text-[#6A45C9]">The Top Web Hosting</span> is an independent comparison
+              <span className="font-bold"><span className="text-[#191919]">The Top</span> <span className="text-[#9B7FEE]">Web Hosting</span></span> is an independent comparison
               publisher for web hosting plans and providers.
             </p>
           </div>
