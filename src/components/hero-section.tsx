@@ -25,25 +25,13 @@ export function HeroSection({
   maxTextWidth = "640px",
 }: HeroSectionProps) {
   return (
-    <section className="relative w-full min-h-[150px] py-5 sm:py-0 sm:h-[240px] lg:h-[300px] overflow-hidden bg-gradient-to-r from-[#F3EEFF] via-[#F6F2FF] to-[#FBF9FF]">
-      {/* Hero image positioned on the right (omitted when no image is set) */}
-      {backgroundImageUrl && (
-        <div className="absolute right-[380px] top-0 h-full w-[50%] hidden sm:block">
-          <Image
-            src={backgroundImageUrl}
-            alt={imageAlt}
-            fill
-            priority
-            className="object-contain object-right-top"
-          />
-        </div>
-      )}
-
+    <section className="relative w-full min-h-[150px] py-5 sm:py-0 sm:h-[240px] lg:h-[300px] overflow-hidden bg-gradient-to-r from-[#F8F5FF] via-[#FAF8FF] to-[#FDFCFF]">
       {/* Content */}
       <div
         className={cn(
           "relative z-10 mx-auto flex h-full max-w-[1280px] flex-col justify-center px-4 py-3 sm:px-10 sm:py-6 lg:px-16 lg:py-8",
-          textAlign === "center" && "items-center text-center"
+          textAlign === "center" && "items-center text-center",
+          backgroundImageUrl && "lg:flex-row lg:items-center lg:justify-between lg:gap-8"
         )}
       >
         <div className="max-w-[640px] lg:max-w-[900px]" style={{ maxWidth: maxTextWidth !== "640px" ? maxTextWidth : undefined }}>
@@ -83,6 +71,20 @@ export function HeroSection({
             ))}
           </div>
         </div>
+
+        {/* Hero illustration on the right - desktop only (omitted when no image is set) */}
+        {backgroundImageUrl && (
+          <div className="relative hidden h-[207px] w-[320px] shrink-0 lg:block xl:h-[260px] xl:w-[403px]">
+            <Image
+              src={backgroundImageUrl}
+              alt={imageAlt}
+              fill
+              priority
+              sizes="(min-width: 1280px) 403px, 320px"
+              className="object-contain object-right"
+            />
+          </div>
+        )}
       </div>
     </section>
   );
