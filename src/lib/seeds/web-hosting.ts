@@ -60,8 +60,6 @@ import type { BattleData, BattleFeatureRow, SiteConfig } from "@/lib/config";
 //    live profile. Ratings for Hosting.com and Domain.com are left blank
 //    because no reliable figure was found. No Trustpilot review TEXT is
 //    included: none could be verified verbatim.
-//  - The logos in /public/logos are plain text placeholders. Replace them
-//    with the official brand assets each affiliate program provides.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-10-16";
@@ -761,8 +759,8 @@ export const webHostingConfig: SiteConfig = {
       websiteUrl: "https://hosting.com/",
       name: "Hosting.com",
       tagline: "The new name for A2 Hosting - cPanel hosting with LiteSpeed-powered speed tiers, VPS and dedicated servers",
-      logo: "/logos/hosting-com.png",
-      smallLogo: "/logos/hosting-com.png",
+      logo: "/logos/hosting-com.svg",
+      smallLogo: "/logos/hosting-com.svg",
       highlights: [
         "Formerly A2 Hosting",
         "cPanel control panel",
