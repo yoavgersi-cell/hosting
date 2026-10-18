@@ -675,8 +675,8 @@ export const webHostingConfig: SiteConfig = {
     "Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.",
 
   hero: {
-    backgroundImageUrl: "",
-    imageAlt: "Web hosting servers powering websites",
+    backgroundImageUrl: "/hero-hosting.webp",
+    imageAlt: "Illustration of hosting servers, a cloud and a laptop showing a website",
     updatedLabel: "Last Updated: October 2026",
     h1: "Best Web Hosting Providers of 2026",
     h2: "The top web hosting plans, ranked and reviewed",
