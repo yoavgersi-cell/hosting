@@ -108,6 +108,17 @@ html[data-hub] .hub-name {
    .qa       an "at a glance" callout box (quick answer / snippet bait)
    .cta-row  an inline text-link call-to-action row                       */
 
+.article-body h3 {
+  margin: 1.4em 0 0.5em;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #191919;
+}
+.article-body h3:first-child {
+  margin-top: 0.2em;
+}
+
 .article-body > p + p,
 .article-body p + p {
   margin-top: 0.9em;

@@ -21,6 +21,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
+      { label: "How to Choose Web Hosting", href: "/articles/how-to-choose-web-hosting" },
       { label: "What Is Web Hosting?", href: "/articles/what-is-web-hosting" },
       { label: "Web Hosting Cost", href: "/articles/how-much-does-web-hosting-cost" },
       { label: "Renewal Prices Explained", href: "/articles/web-hosting-renewal-prices-explained" },
