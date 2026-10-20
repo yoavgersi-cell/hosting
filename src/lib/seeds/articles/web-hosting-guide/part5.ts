@@ -163,7 +163,7 @@ export const staging: ArticleSection = {
 
 export const bestForWordPress: ArticleSection = {
   heading: "What is the best web hosting for WordPress?",
-  body: `<p>For most WordPress sites, the best hosting combines server-level caching, current PHP versions, NVMe storage, daily backups, staging and support that understands WordPress. Among the providers we track, <a href="/reviews/hostinger">Hostinger</a> offers the best value with WordPress and WooCommerce plans managed through hPanel and included backups; <a href="/reviews/bluehost">Bluehost</a> offers the most guided WordPress experience with phone support; and <a href="/reviews/hosting-com">Hosting.com</a> suits users who want cPanel and LiteSpeed-based plans. For busy WooCommerce stores, step up to a cloud plan or managed VPS.</p>`,
+  body: `<p>For most WordPress sites, the best hosting combines server-level caching, current PHP versions, NVMe storage, daily backups, staging and support that understands WordPress. Among the providers we track, <a href="/reviews/hostinger">Hostinger</a> offers the best value with WordPress and WooCommerce plans managed through hPanel and included backups; <a href="/reviews/bluehost">Bluehost</a> offers the most guided WordPress experience with phone support; and <a href="/reviews/hosting-com">Hosting.com</a> suits users who want cPanel and LiteSpeed-based plans. For busy WooCommerce stores, step up to a cloud plan or managed VPS. Our dedicated <a href="/articles/best-wordpress-hosting">best WordPress hosting guide</a> goes much deeper.</p>`,
 };
 
 export const sameCompany: ArticleSection = {

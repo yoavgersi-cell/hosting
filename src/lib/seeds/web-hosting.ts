@@ -1,5 +1,6 @@
 import type { BattleData, BattleFeatureRow, SiteConfig } from "@/lib/config";
 import { webHostingGuide } from "./articles/web-hosting-guide";
+import { bestWordPressHosting } from "./articles/best-wordpress-hosting";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Web hosting vertical content - thetopwebhosting.com
@@ -1257,6 +1258,7 @@ export const webHostingConfig: SiteConfig = {
 
   articles: [
     webHostingGuide,
+    bestWordPressHosting,
     {
       slug: "what-is-web-hosting",
       title: "What Is Web Hosting? How It Works, Types & Cost",

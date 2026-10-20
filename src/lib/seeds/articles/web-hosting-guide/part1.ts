@@ -113,7 +113,7 @@ export const part1: ArticleSection[] = [
 </ul>
 <h3>Is managed WordPress hosting worth it?</h3>
 <p>For most WordPress users, an entry-level "WordPress hosting" plan from a mainstream host is perfectly adequate and costs about the same as shared hosting. Premium managed WordPress hosting is worth paying more for when your site earns money and downtime or a hacked site would cost you real revenue, or when you do not want to spend time on updates and troubleshooting.</p>
-<p>Bluehost has built its brand around WordPress and its dashboard is designed for WordPress beginners; Hostinger offers dedicated WordPress and WooCommerce plans managed through hPanel; Hosting.com (formerly A2 Hosting) is part of World Host Group, which also owns the managed WordPress platform Rocket.net; and UltaHost sells managed WordPress plans on NVMe storage. See our <a href="/reviews/bluehost">Bluehost review</a> and <a href="/articles/is-bluehost-good">is Bluehost good?</a> for a WordPress-focused perspective.</p>`,
+<p>Bluehost has built its brand around WordPress and its dashboard is designed for WordPress beginners; Hostinger offers dedicated WordPress and WooCommerce plans managed through hPanel; Hosting.com (formerly A2 Hosting) is part of World Host Group, which also owns the managed WordPress platform Rocket.net; and UltaHost sells managed WordPress plans on NVMe storage. For a full WordPress-specific comparison, read our guide to the <a href="/articles/best-wordpress-hosting">best WordPress hosting</a>.</p>`,
   },
   {
     heading: "What is the difference between cloud hosting and VPS hosting?",
