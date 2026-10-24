@@ -21,9 +21,10 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
+      { label: "How to Choose Web Hosting", href: "/articles/how-to-choose-web-hosting" },
+      { label: "Best WordPress Hosting", href: "/articles/best-wordpress-hosting" },
       { label: "What Is Web Hosting?", href: "/articles/what-is-web-hosting" },
       { label: "Web Hosting Cost", href: "/articles/how-much-does-web-hosting-cost" },
-      { label: "Renewal Prices Explained", href: "/articles/web-hosting-renewal-prices-explained" },
       { label: "Shared vs VPS vs Cloud", href: "/articles/shared-vs-vps-vs-cloud-hosting" },
       { label: "How to Choose a Host", href: "/articles/how-to-choose-a-web-hosting-provider" },
       { label: "How to Migrate a Website", href: "/articles/how-to-migrate-your-website-to-a-new-host" },

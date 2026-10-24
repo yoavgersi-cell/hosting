@@ -1,4 +1,7 @@
 import type { BattleData, BattleFeatureRow, SiteConfig } from "@/lib/config";
+import { webHostingGuide } from "./articles/web-hosting-guide";
+import { bestWordPressHosting } from "./articles/best-wordpress-hosting";
+import { whoOwnsYourWebHost } from "./articles/who-owns-your-web-host";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Web hosting vertical content - thetopwebhosting.com
@@ -1255,6 +1258,9 @@ export const webHostingConfig: SiteConfig = {
   ],
 
   articles: [
+    webHostingGuide,
+    bestWordPressHosting,
+    whoOwnsYourWebHost,
     {
       slug: "what-is-web-hosting",
       title: "What Is Web Hosting? How It Works, Types & Cost",
