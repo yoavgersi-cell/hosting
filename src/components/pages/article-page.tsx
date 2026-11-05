@@ -395,11 +395,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-500">
                 In this article
               </p>
-              <ol className="space-y-1.5">
+              <ol className="space-y-0.5">
                 {article.sections.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[14px] leading-snug">
-                    <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
-                    <a href={`#${slugifyHeading(s.heading)}`} className="text-[#6A45C9] hover:underline">
+                    <span className="shrink-0 py-1 font-semibold text-gray-500">{i + 1}.</span>
+                    <a href={`#${slugifyHeading(s.heading)}`} className="block py-1 text-[#6A45C9] hover:underline">
                       {s.heading}
                     </a>
                   </li>

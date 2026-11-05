@@ -80,9 +80,9 @@ export async function Footer() {
           {columns.map((col) => (
             <div key={col.title}>
               <h2 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h2>
-              <nav className="space-y-1.5">
+              <nav className="space-y-0.5">
                 {col.links.map((l) => (
-                  <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#6A45C9]">
+                  <Link key={l.label} href={l.href} className="block py-1.5 text-[14px] text-gray-500 hover:text-[#6A45C9] sm:py-1 sm:text-[13px]">
                     {l.label}
                   </Link>
                 ))}

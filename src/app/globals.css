@@ -201,18 +201,52 @@ html[data-hub] .hub-name {
   color: #191919;
 }
 @media (max-width: 640px) {
-  /* Wide tables scroll inside their own box. Cells wrap with a sensible
-     minimum width, so a 4-column table is ~550px of swipe rather than one
-     unwrapped line per cell (which made some tables 1,600px wide). */
+  /* Wide tables scroll inside their own box. Cells wrap with a minimum
+     width small enough that a 3-column table fits a phone screen without
+     scrolling; 4+ column tables swipe sideways. The first column (row
+     labels) stays pinned while the rest scrolls, and a soft shadow at the
+     edge (CSS-only "scroll shadow") signals there is more to see. */
   .article-body table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    font-size: 13.5px;
+    background:
+      linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0)) right center / 32px 100% no-repeat local,
+      radial-gradient(farthest-side at 100% 50%, rgba(25, 25, 25, 0.14), rgba(25, 25, 25, 0)) right center / 12px 100% no-repeat scroll,
+      #fff;
   }
   .article-body table th,
   .article-body table td {
-    min-width: 8.5rem;
+    min-width: 6.5rem;
+    padding: 9px 10px;
     white-space: normal;
+  }
+  .article-body table th:first-child,
+  .article-body table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: inset -1px 0 0 #e5e7eb;
+  }
+  .article-body table thead th:first-child {
+    background: #f8fafc;
+  }
+  .article-body .table-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 1.15em 0 -0.6em;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #6b7280;
+  }
+}
+@media (min-width: 641px) {
+  .article-body .table-hint {
+    display: none;
   }
 }
 .article-body .qa {

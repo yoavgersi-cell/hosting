@@ -34,7 +34,7 @@ export function ProviderFactsTable({ providers }: { providers: Provider[] }) {
             {rows.map((p, i) => (
               <tr key={p.id} className={i % 2 === 1 ? "bg-gray-50/50" : ""}>
                 <th scope="row" className="px-4 py-3 align-top font-semibold">
-                  <Link href={`/reviews/${p.id}`} className="text-[#6A45C9] hover:underline">
+                  <Link href={`/reviews/${p.id}`} className="-my-1 inline-block py-1 text-[#6A45C9] hover:underline">
                     {i + 1}. {p.name}
                   </Link>
                 </th>

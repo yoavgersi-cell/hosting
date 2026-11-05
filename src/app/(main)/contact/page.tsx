@@ -26,7 +26,7 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="text-sm font-semibold text-[#191919]">Email us</p>
-            <a href="mailto:hello@thetopwebhosting.com" className="text-[15px] font-semibold text-[#6A45C9] hover:underline">
+            <a href="mailto:hello@thetopwebhosting.com" className="inline-block py-1 text-[15px] font-semibold text-[#6A45C9] hover:underline">
               hello@thetopwebhosting.com
             </a>
           </div>
