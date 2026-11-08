@@ -53,6 +53,9 @@ export const hostingPriceIncreases2026: ArticleData = {
   title: "Why Web Hosting Is Getting More Expensive in 2026 (and How to Lock In a Low Price)",
   description:
     "Server memory prices surged, Hetzner and OVHcloud raised prices, cPanel and Plesk go up in 2027 and .com domains cost more. What it means for your hosting bill - and how to lock in a low price, including on Black Friday.",
+  seoTitle: "Why Web Hosting Is Getting More Expensive in 2026",
+  seoDescription:
+    "Why web hosting prices are rising in 2026: memory costs, cPanel licence increases and .com fees, plus practical ways to lock in a low price before you renew.",
   category: "Buying",
   readTime: "55 min read",
   publishedAt: "2026-10-31",

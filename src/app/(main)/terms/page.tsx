@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "The terms governing your use of The Top Web Hosting (thetopwebhosting.com), including our informational-only nature, affiliate disclosure, and limitation of liability.",
+    "The terms for using The Top Web Hosting (thetopwebhosting.com), including our informational-only nature, affiliate disclosure and limitation of liability.",
   alternates: { canonical: "https://www.thetopwebhosting.com/terms" },
 };
 

@@ -130,9 +130,14 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   const metaTitle = override?.title
     ? titleCaseOverrideTitle(override.title)
     : (() => {
-        const long = `${titleCaseMatchup(baseLabel)} (2026): Price, Speed & Features Compared`;
-        // Long matchups drop the tail so the title stays inside the ~65-char SERP cut-off.
-        return long.length <= 65 ? long : `${titleCaseMatchup(baseLabel)} (2026) Compared`;
+        const m = titleCaseMatchup(baseLabel);
+        // Longest variant that fits the ~60-char SERP cut-off.
+        const variants = [
+          `${m} (2026): Price, Speed & Features Compared`,
+          `${m} (2026): Price, Speed & Features`,
+          `${m} (2026): Which Host Is Better?`,
+        ];
+        return variants.find((v) => v.length <= 60) ?? `${m} (2026) Compared`;
       })();
   const metaDescription = override?.description ?? battle.description;
 

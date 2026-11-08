@@ -45,6 +45,9 @@ export const whoOwnsYourWebHost: ArticleData = {
   title: "Who Owns Your Web Host? Hosting Industry Consolidation Explained (2026)",
   description:
     "Who owns Bluehost, Hosting.com, Hostinger, Network Solutions and other hosting brands? A sourced guide to Newfold Digital, hosting.com group, GoDaddy, IONOS, team.blue and the deals reshaping web hosting - and what it means for you.",
+  seoTitle: "Who Owns Your Web Host? Hosting Consolidation (2026)",
+  seoDescription:
+    "Who really owns your web host? Newfold, team.blue, GoDaddy, IONOS and more: hosting industry consolidation explained, and what it means for your site.",
   category: "Industry",
   readTime: "55 min read",
   publishedAt: "2026-10-24",

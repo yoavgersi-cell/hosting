@@ -13,6 +13,8 @@ export const php82EndOfLife: ArticleData = {
   title: "PHP 8.2 End of Life: What It Means for Your Website",
   description:
     "PHP 8.2 stops getting security fixes on 31 December 2026. How to check your version, whether to move to PHP 8.3 or 8.4, what hosts like WP Cloud, Hostinger and SiteGround are doing, and how to upgrade WordPress safely.",
+  seoDescription:
+    "PHP 8.2 loses security support on 31 December 2026. How to check your version, choose PHP 8.3 or 8.4, see what hosts are doing, and upgrade safely.",
   category: "Guides",
   readTime: "19 min read",
   publishedAt: "2026-11-05",

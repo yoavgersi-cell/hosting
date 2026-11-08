@@ -16,7 +16,7 @@ const CANONICAL = "https://www.thetopwebhosting.com/how-we-rank";
 export const metadata: Metadata = {
   title: { absolute: "How We Rank Web Hosting Providers | The Top Web Hosting" },
   description:
-    "How we rank web hosting providers: the 6 factors we score, where our data comes from, how we verify intro and renewal prices, and how we pick comparison winners.",
+    "How we rank web hosting providers: the 6 factors we score, where our data comes from, how we check intro and renewal prices, and how we pick winners.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "How We Rank & Review Web Hosting Providers - Our Methodology",

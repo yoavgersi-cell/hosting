@@ -26,6 +26,8 @@ export const webHostingStatistics: ArticleData = {
   title: "Web Hosting Statistics 2026: 150+ Facts & Trends",
   description:
     "The latest web hosting statistics for 2026, with sources: 1.49 billion websites, 411.6 million domains, WordPress market share, hosting market size, Core Web Vitals pass rates, security, bots, outages, AI search and rising hosting costs.",
+  seoDescription:
+    "Web hosting statistics for 2026: 150+ facts on websites, domains, market size, CMS share, speed, security, outages and AI traffic, each with its source.",
   category: "Industry",
   readTime: "40 min read",
   publishedAt: "2026-11-02",

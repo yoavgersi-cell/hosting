@@ -185,6 +185,10 @@ export interface ArticleData {
   slug: string;
   title: string;
   description: string;
+  // Optional SERP-sized overrides (title <= 60 chars, description <= 160).
+  // The on-page H1 and card copy keep using title/description.
+  seoTitle?: string;
+  seoDescription?: string;
   category: string;
   readTime: string;
   publishedAt: string;

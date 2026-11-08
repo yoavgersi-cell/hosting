@@ -36,14 +36,15 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   // CTR override (code-controlled) wins over stored meta for target articles.
   const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
 
-  const seoTitle = override?.title ?? article.title;
+  const seoTitle = override?.title ?? article.seoTitle ?? article.title;
+  const seoDescription = override?.description ?? article.seoDescription ?? article.description;
 
   return {
     // Long, query-led titles carry their own keywords; appending the
     // " | The Top Web Hosting" template suffix would push them past the ~60-character
     // SERP cut-off, so those render as-is.
-    title: seoTitle.length > 44 ? { absolute: seoTitle } : seoTitle,
-    description: override?.description ?? article.description,
+    title: seoTitle.length + " | The Top Web Hosting".length > 60 ? { absolute: seoTitle } : seoTitle,
+    description: seoDescription,
     robots: ctx.noindex
       ? { index: false, follow: false }
       : NOINDEX_ARTICLE_SLUGS.includes(slug)
@@ -53,8 +54,8 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       canonical: url,
     },
     openGraph: {
-      title: override?.title ?? article.title,
-      description: override?.description ?? article.description,
+      title: seoTitle,
+      description: seoDescription,
       url,
       type: "article",
       publishedTime: article.publishedAt,
