@@ -5,6 +5,7 @@ import { whoOwnsYourWebHost } from "./articles/who-owns-your-web-host";
 import { hostingPriceIncreases2026 } from "./articles/hosting-price-increases-2026";
 import { webHostingStatistics } from "./articles/web-hosting-statistics";
 import { php82EndOfLife } from "./articles/php-8-2-end-of-life";
+import { bestWebHostingForSmallBusiness } from "./articles/best-web-hosting-for-small-business";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Web hosting vertical content - thetopwebhosting.com
@@ -1267,6 +1268,7 @@ export const webHostingConfig: SiteConfig = {
     hostingPriceIncreases2026,
     webHostingStatistics,
     php82EndOfLife,
+    bestWebHostingForSmallBusiness,
     {
       slug: "what-is-web-hosting",
       title: "What Is Web Hosting? How It Works, Types & Cost",

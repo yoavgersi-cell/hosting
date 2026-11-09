@@ -12,7 +12,7 @@ export const part6: ArticleSection[] = [
 <ul>
 <li><strong>The headline price assumes the longest term.</strong> Choose monthly or annual billing and the monthly rate goes up, sometimes a lot.</li>
 <li><strong>You pay the whole term upfront.</strong> A "$2.99 a month" deal on 48 months is a single payment of well over $100.</li>
-<li><strong>Renewal is at the regular rate.</strong> Reported renewal rates for entry plans at our top picks are around $10-$11 a month - several times the intro price.</li>
+<li><strong>Renewal is at the regular rate.</strong> Reported renewal rates for entry plans at our top picks are roughly $10-$14 a month - several times the intro price.</li>
 <li><strong>Add-ons change the maths.</strong> Daily backups, extra mailboxes, domain privacy and security tools are sometimes free and sometimes not, depending on plan and host.</li>
 </ul>
 <h3>Is it worth paying a little more?</h3>

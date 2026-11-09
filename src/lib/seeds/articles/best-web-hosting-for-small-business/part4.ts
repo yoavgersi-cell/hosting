@@ -97,7 +97,18 @@ export const part4: ArticleSection[] = [
 </tbody>
 </table>
 <h3>Your side of the deal</h3>
-<p>Even the best host cannot protect a site whose owner never updates it. Keep WordPress core, themes and plugins updated; delete plugins you no longer use; use unique passwords and a password manager; remove old staff and contractor accounts; and keep at least one backup that does not live on the same server as your website. On WordPress specifically, the large majority of reported vulnerabilities are found in plugins rather than in WordPress itself, which is why "fewer, well-maintained plugins" is the most effective security advice we can give.</p>`,
+<p>Even the best host cannot protect a site whose owner never updates it. Keep WordPress core, themes and plugins updated; delete plugins you no longer use; use unique passwords and a password manager; remove old staff and contractor accounts; and keep at least one backup that does not live on the same server as your website. On WordPress specifically, the large majority of reported vulnerabilities are found in plugins rather than in WordPress itself, which is why "fewer, well-maintained plugins" is the most effective security advice we can give.</p>
+<h3>The numbers behind the advice</h3>
+<table>
+<thead><tr><th>Finding</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>11,334 new WordPress vulnerabilities were disclosed in 2025, up 42% on 2024</td><td>Patchstack, State of WordPress Security in 2026</td></tr>
+<tr><td>91% of those vulnerabilities were in plugins, 9% in themes, and only a handful in WordPress core</td><td>Patchstack</td></tr>
+<tr><td>46% had no patch available when they were disclosed</td><td>Patchstack</td></tr>
+<tr><td>Ransomware was present in 88% of breaches at small and medium-sized businesses, compared with 39% at large organizations</td><td>Verizon Data Breach Investigations Report 2025</td></tr>
+</tbody>
+</table>
+<p><em>Verizon defines small businesses as those with fewer than 1,000 employees, and its figure describes breaches that occurred - not the share of businesses that are breached.</em></p>`,
   },
   {
     heading: "How should a small business handle backups and disaster recovery?",
@@ -132,6 +143,7 @@ export const part4: ArticleSection[] = [
 <li><strong>Security.</strong> A hacked site can be flagged in search results or filled with spam pages, which can take a long time to recover from.</li>
 <li><strong>HTTPS.</strong> Every host we recommend includes free SSL, so this should never be an issue.</li>
 </ul>
+<p>Customer behaviour shows where the real competition is. BrightLocal's 2026 Local Consumer Review Survey of US adults found that 97% read reviews when choosing a local business, that 74% look for reviews from the last three months, and that the share of people who would not use a business rated below 4.5 stars rose to 31%. It also found sharply higher use of AI tools to find local recommendations. Mobile matters too: StatCounter put mobile devices at about 60% of worldwide web traffic in October 2026.</p>
 <h3>What matters more for local search</h3>
 <ul>
 <li>A complete, verified <strong>Google Business Profile</strong> with accurate hours, categories and photos.</li>
