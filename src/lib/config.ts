@@ -189,6 +189,9 @@ export interface ArticleData {
   // The on-page H1 and card copy keep using title/description.
   seoTitle?: string;
   seoDescription?: string;
+  // Optional ranked "top 3" provider cards (TopProvidersBlock) rendered
+  // after the first section. Use on buyer-intent guides only.
+  topProvidersBlock?: { title: string; subtitle?: string };
   category: string;
   readTime: string;
   publishedAt: string;

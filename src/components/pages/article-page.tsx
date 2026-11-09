@@ -436,6 +436,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 )}
 
+                {i === 0 && !showTopProvidersCro && article.topProvidersBlock && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    title={article.topProvidersBlock.title}
+                    subtitle={article.topProvidersBlock.subtitle}
+                  />
+                )}
+
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}
                 {i === 0 && showPartnerCro && (
@@ -536,7 +546,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     "is X legit" articles: a trust-check page advertising the
                     reviewed provider's competitors undermines the article's
                     credibility and cannibalizes its own conversion. */}
-                {i === 1 && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
+                {i === 1 && !/^is-.+-legit$/.test(slug) && !article.topProvidersBlock && topProviders.length > 0 && (
                   <TopProviderCards
                     config={config}
                     limit={3}
