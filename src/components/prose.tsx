@@ -105,8 +105,22 @@ function maybeSplitPlainBody(html: string): string {
   return chunks.map((c) => `<p>${c}</p>`).join("");
 }
 
+// Tables with 4+ columns cannot fit a phone screen, so they scroll
+// sideways inside their own box (see .article-body table in globals.css).
+// Prepend a small, mobile-only hint so readers know to swipe.
+const TABLE_HINT =
+  '<p class="table-hint" aria-hidden="true">Swipe sideways to see the full table &rarr;</p>';
+
+function addTableHints(html: string): string {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner: string) => {
+    const head = inner.match(/<thead>([\s\S]*?)<\/thead>/);
+    const cols = head ? (head[1].match(/<th[\s>]/g) ?? []).length : 0;
+    return cols >= 4 ? TABLE_HINT + table : table;
+  });
+}
+
 export function enhanceArticleHtml(html: string): string {
-  const parts = maybeSplitPlainBody(html).split(/(<[^>]+>)/g);
+  const parts = addTableHints(maybeSplitPlainBody(html)).split(/(<[^>]+>)/g);
   const SKIP_OPEN = /^<(a|strong|b|h[1-6])\b/i;
   const SKIP_CLOSE = /^<\/(a|strong|b|h[1-6])>/i;
   let skipDepth = 0;

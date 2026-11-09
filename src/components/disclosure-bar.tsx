@@ -8,11 +8,11 @@ export function DisclosureBar() {
 
   return (
     <>
-      <div className="bg-[#F8F5FF] border-b-[1.5px] border-[#E2D9FA] px-4 py-1.5 sm:py-2 text-center text-[10px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
+      <div className="bg-[#F8F5FF] border-b-[1.5px] border-[#E2D9FA] px-4 py-1.5 sm:py-2 text-center text-[11.5px] sm:text-[13px] leading-snug sm:leading-normal text-gray-600">
         Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.{" "}
         <button
           onClick={() => setIsOpen(true)}
-          className="font-bold text-[#191919] underline underline-offset-2 hover:text-[#6A45C9]"
+          className="-my-1.5 inline-block py-1.5 font-bold text-[#191919] underline underline-offset-2 hover:text-[#6A45C9]"
         >
           Advertising Disclosure
         </button>
@@ -27,7 +27,8 @@ export function DisclosureBar() {
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute right-4 top-4 text-gray-500 hover:text-gray-600"
+              aria-label="Close advertising disclosure"
+              className="absolute right-2 top-2 flex h-10 w-10 items-center justify-center text-gray-500 hover:text-gray-600"
             >
               <X className="h-5 w-5" strokeWidth={1.5} />
             </button>

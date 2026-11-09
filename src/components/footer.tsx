@@ -21,9 +21,10 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
-      { label: "What Is Web Hosting?", href: "/articles/what-is-web-hosting" },
+      { label: "How to Choose Web Hosting", href: "/articles/how-to-choose-web-hosting" },
+      { label: "Best WordPress Hosting", href: "/articles/best-wordpress-hosting" },
+      { label: "Web Hosting Statistics", href: "/articles/web-hosting-statistics" },
       { label: "Web Hosting Cost", href: "/articles/how-much-does-web-hosting-cost" },
-      { label: "Renewal Prices Explained", href: "/articles/web-hosting-renewal-prices-explained" },
       { label: "Shared vs VPS vs Cloud", href: "/articles/shared-vs-vps-vs-cloud-hosting" },
       { label: "How to Choose a Host", href: "/articles/how-to-choose-a-web-hosting-provider" },
       { label: "How to Migrate a Website", href: "/articles/how-to-migrate-your-website-to-a-new-host" },
@@ -79,9 +80,9 @@ export async function Footer() {
           {columns.map((col) => (
             <div key={col.title}>
               <h2 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h2>
-              <nav className="space-y-1.5">
+              <nav className="space-y-0.5">
                 {col.links.map((l) => (
-                  <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#6A45C9]">
+                  <Link key={l.label} href={l.href} className="block py-1.5 text-[14px] text-gray-500 hover:text-[#6A45C9] sm:py-1 sm:text-[13px]">
                     {l.label}
                   </Link>
                 ))}

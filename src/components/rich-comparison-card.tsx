@@ -125,7 +125,7 @@ export function RichComparisonCard({
               <div className="rounded-xl border border-gray-100 bg-[#F7F8FA] p-3.5 sm:p-4">
                 {treatments.length > 0 && (
                   <div>
-                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Treatments offered</p>
+                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Hosting types</p>
                     <p className="mt-1 text-[12.5px] leading-snug text-gray-800 line-clamp-2 sm:line-clamp-none sm:text-[13.5px]">{treatments.slice(0, 4).join(" · ")}</p>
                   </div>
                 )}

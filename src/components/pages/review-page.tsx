@@ -54,7 +54,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Domain.com reviewed: web hosting plans, first-year pricing, paid email, the free domain and whether hosting your site with a registrar makes sense.",
   },
   bigrock: {
-    title: "BigRock Review (2026): Hosting Plans, Prices in INR & Support",
+    title: "BigRock Review (2026): Hosting Plans, INR Prices & Support",
     description:
       "BigRock reviewed: Linux, Windows, WordPress and VPS hosting, INR pricing and renewals, refund rules and who India's popular host suits.",
   },

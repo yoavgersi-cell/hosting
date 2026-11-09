@@ -1,4 +1,11 @@
 import type { BattleData, BattleFeatureRow, SiteConfig } from "@/lib/config";
+import { webHostingGuide } from "./articles/web-hosting-guide";
+import { bestWordPressHosting } from "./articles/best-wordpress-hosting";
+import { whoOwnsYourWebHost } from "./articles/who-owns-your-web-host";
+import { hostingPriceIncreases2026 } from "./articles/hosting-price-increases-2026";
+import { webHostingStatistics } from "./articles/web-hosting-statistics";
+import { php82EndOfLife } from "./articles/php-8-2-end-of-life";
+import { bestWebHostingForSmallBusiness } from "./articles/best-web-hosting-for-small-business";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Web hosting vertical content - thetopwebhosting.com
@@ -597,7 +604,7 @@ const battles: BattleData[] = [
     matchupLabel: "Hostinger vs Domain.com",
     subtitle: "A full-featured budget host vs a registrar's hosting plans",
     description:
-      "Compare Hostinger and Domain.com - prices, free domain, email, backups and which is better for a new website.",
+      "Compare Hostinger and Domain.com - intro and renewal prices, free domain, email, backups and which is the better host for a new website.",
     intro:
       "Hostinger is a dedicated web host with a free domain on most plans; Domain.com is a registrar that also sells hosting. Here's how they compare for a new site.",
     verdict:
@@ -1255,6 +1262,13 @@ export const webHostingConfig: SiteConfig = {
   ],
 
   articles: [
+    webHostingGuide,
+    bestWordPressHosting,
+    whoOwnsYourWebHost,
+    hostingPriceIncreases2026,
+    webHostingStatistics,
+    php82EndOfLife,
+    bestWebHostingForSmallBusiness,
     {
       slug: "what-is-web-hosting",
       title: "What Is Web Hosting? How It Works, Types & Cost",
@@ -1571,7 +1585,7 @@ export const webHostingConfig: SiteConfig = {
       slug: "hostinger-plans-explained",
       title: "Hostinger Plans Explained: Premium vs Business vs Cloud",
       description:
-        "What each Hostinger plan includes, intro and renewal prices, and which tier fits your site.",
+        "What each Hostinger plan includes, intro vs renewal prices, storage, email and backups, and which Hostinger tier fits your site and budget.",
       category: "Providers",
       readTime: "5 min read",
       publishedAt: UPDATED,

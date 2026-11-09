@@ -36,14 +36,15 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   // CTR override (code-controlled) wins over stored meta for target articles.
   const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
 
-  const seoTitle = override?.title ?? article.title;
+  const seoTitle = override?.title ?? article.seoTitle ?? article.title;
+  const seoDescription = override?.description ?? article.seoDescription ?? article.description;
 
   return {
     // Long, query-led titles carry their own keywords; appending the
     // " | The Top Web Hosting" template suffix would push them past the ~60-character
     // SERP cut-off, so those render as-is.
-    title: seoTitle.length > 44 ? { absolute: seoTitle } : seoTitle,
-    description: override?.description ?? article.description,
+    title: seoTitle.length + " | The Top Web Hosting".length > 60 ? { absolute: seoTitle } : seoTitle,
+    description: seoDescription,
     robots: ctx.noindex
       ? { index: false, follow: false }
       : NOINDEX_ARTICLE_SLUGS.includes(slug)
@@ -53,8 +54,8 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       canonical: url,
     },
     openGraph: {
-      title: override?.title ?? article.title,
-      description: override?.description ?? article.description,
+      title: seoTitle,
+      description: seoDescription,
       url,
       type: "article",
       publishedTime: article.publishedAt,
@@ -395,11 +396,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-500">
                 In this article
               </p>
-              <ol className="space-y-1.5">
+              <ol className="space-y-0.5">
                 {article.sections.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[14px] leading-snug">
-                    <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
-                    <a href={`#${slugifyHeading(s.heading)}`} className="text-[#6A45C9] hover:underline">
+                    <span className="shrink-0 py-1 font-semibold text-gray-500">{i + 1}.</span>
+                    <a href={`#${slugifyHeading(s.heading)}`} className="block py-1 text-[#6A45C9] hover:underline">
                       {s.heading}
                     </a>
                   </li>
@@ -432,6 +433,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     limit={3}
                     title="Our top 3 tirzepatide providers"
                     subtitle="Ranked by price, plans and verified reviews - the same cards from our full comparison."
+                  />
+                )}
+
+                {i === 0 && !showTopProvidersCro && article.topProvidersBlock && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    title={article.topProvidersBlock.title}
+                    subtitle={article.topProvidersBlock.subtitle}
                   />
                 )}
 
@@ -535,7 +546,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     "is X legit" articles: a trust-check page advertising the
                     reviewed provider's competitors undermines the article's
                     credibility and cannibalizes its own conversion. */}
-                {i === 1 && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
+                {i === 1 && !/^is-.+-legit$/.test(slug) && !article.topProvidersBlock && topProviders.length > 0 && (
                   <TopProviderCards
                     config={config}
                     limit={3}

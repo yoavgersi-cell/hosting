@@ -10,7 +10,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: { absolute: "About The Top Web Hosting - Mission, Team & Methodology" },
   description:
-    "How thetopwebhosting.com independently ranks and reviews web hosting providers: our editorial methodology, review process and commitment to unbiased comparisons.",
+    "How thetopwebhosting.com independently ranks and reviews web hosting providers: our editorial methodology, review process and unbiased comparisons.",
   alternates: {
     canonical: "https://www.thetopwebhosting.com/about",
   },
